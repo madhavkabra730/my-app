@@ -1,5 +1,5 @@
 import React from 'react'
-import Documents from './components/Documents'
+import Documents from './components/Documents.tsx'
 import "./App.css";
 
 const App = () => {

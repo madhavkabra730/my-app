@@ -1,9 +1,9 @@
 // src/App.js
 import React, { useState, useEffect } from "react";
-import Spinner from "./Spinner";
-import Card from "./Card";
+import Spinner from "./Spinner.tsx";
+import Card from "./Card.tsx";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
-import Form from "./Form"; // Import the new Form component
+import Form from "./Form.tsx"; // Import the new Form component
 import { MdAddBox } from "react-icons/md";
 import { FaRegTrashAlt } from "react-icons/fa";
 
