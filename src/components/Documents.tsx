@@ -35,6 +35,7 @@ const Documents = () => {
         })
         .catch((error) => {
           setDocuments(documentData);
+          localStorage.setItem("documents", JSON.stringify(documentData));
           setLoading(false);
         });
     }
