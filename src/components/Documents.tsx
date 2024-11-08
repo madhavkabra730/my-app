@@ -72,7 +72,7 @@ const Documents = () => {
       <h1 className="text-3xl font-bold text-gray-800">Document Cards</h1>
       {/* Pass the form submit handler to the Form component */}
       {showForm && (
-        <div className="z-10 absolute top-0 left-0 flex items-center justify-center h-screen w-screen inset-0 bg-black bg-opacity-70">
+        <div className="z-10 absolute top-0 left-0 flex items-center justify-center h-screen w-screen inset-0 bg-black bg-opacity-70 overflow-hidden">
           <Form onSubmit={handleFormSubmit} setShowForm={setShowForm} />
         </div>
       )}
@@ -85,7 +85,7 @@ const Documents = () => {
           <Droppable droppableId="documents" direction="horizontal">
             {(provided) => (
               <div
-                className="grid grid-cols-3 gap-4"
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
                 ref={provided.innerRef}
                 {...provided.droppableProps}
               >
