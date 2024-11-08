@@ -39,14 +39,12 @@ A simple document management application built with React. This app allows users
 
 To run the development server, use the following command:
 
-    ```
     npm start
 
 The app will run on http://localhost:3000. If you're using json-server for the backend, you can set it up on http://localhost:5000.
 
 4.  **Run the Mock API (json-server)** If you don't already have json-server installed, run:
 
-        ```
         npm install -g json-server
 
     Then, start the mock API:
