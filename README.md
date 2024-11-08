@@ -26,12 +26,12 @@ A simple document management application built with React. This app allows users
 ### Setup
 
 1. **Clone the Repository**
-   ```bash
+   ```
    git clone <repository-url>
    cd <project-folder>
    ```
 2. **Install Dependencies**
-   ```bash
+   ```
    Copy code
    npm install
    ```
@@ -39,14 +39,14 @@ A simple document management application built with React. This app allows users
 
 To run the development server, use the following command:
 
-    ```bash
+    ```
     npm start
 
 The app will run on http://localhost:3000. If you're using json-server for the backend, you can set it up on http://localhost:5000.
 
 4.  **Run the Mock API (json-server)** If you don't already have json-server installed, run:
 
-        ```bash
+        ```
         npm install -g json-server
 
     Then, start the mock API:
