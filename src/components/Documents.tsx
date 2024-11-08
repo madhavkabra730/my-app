@@ -6,6 +6,7 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import Form from "./Form.tsx"; // Import the new Form component
 import { MdAddBox } from "react-icons/md";
 import { FaRegTrashAlt } from "react-icons/fa";
+import { documentData } from "../components/data.ts";
 
 interface Document {
   title: string;
@@ -33,7 +34,7 @@ const Documents = () => {
           setLoading(false);
         })
         .catch((error) => {
-          console.error("Error fetching documents:", error);
+          setDocuments(documentData);
           setLoading(false);
         });
     }
