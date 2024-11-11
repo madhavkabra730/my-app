@@ -6,7 +6,6 @@ import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import Form from "./Form.tsx"; // Import the new Form component
 import { MdAddBox } from "react-icons/md";
 import { FaRegTrashAlt } from "react-icons/fa";
-import { documentData } from "../components/data.ts";
 
 interface Document {
   title: string;
@@ -26,18 +25,16 @@ const Documents = () => {
       setLoading(false);
     } else {
       setLoading(true);
-      fetch("http://localhost:5000/documents")
+      fetch("/documents")
         .then((response) => response.json())
         .then((data) => {
           setDocuments(data);
           localStorage.setItem("documents", JSON.stringify(data));
-          setLoading(false);
         })
         .catch((error) => {
-          setDocuments(documentData);
-          localStorage.setItem("documents", JSON.stringify(documentData));
-          setLoading(false);
-        });
+          console.log(error);
+        })
+        .finally(() => setLoading(false));
     }
   }, []);
 
@@ -90,7 +87,7 @@ const Documents = () => {
                 ref={provided.innerRef}
                 {...provided.droppableProps}
               >
-                {documents.map((doc, index) => (
+                {documents?.map((doc, index) => (
                   <Draggable
                     key={doc.type}
                     draggableId={doc.type}
